@@ -2,9 +2,9 @@ import React from 'react'
 
 const Inputfield = ({label,value ,setTextInput }) => {
   return (
-    <div>
+    <div className='text-center '>
         <label htmlFor={label}>{label} </label>
-        <textarea  id={label} cols="30" rows="10" value={value} onChange={(e)=>setTextInput(e.target.value)}></textarea>
+        <textarea className='border ml-4'  id={label} cols="30" rows="2" value={value} onChange={(e)=>setTextInput(e.target.value)}></textarea>
     </div>
   )
 }
