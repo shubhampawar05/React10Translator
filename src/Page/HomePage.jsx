@@ -66,28 +66,26 @@ const HomePage = () => {
         //       console.log(response.data);
         //   } catch (error) {
         //       console.error(error);
-        //   }
-
-
-
-
-
-          
+        //   }    
     }
   
 
   return (
-    <div>
-        <h1>Language Translator</h1>
-       <Dropdown label={"source Language"} lang={Data} setfun={setSourcelang}/>
-        <br />
-        <Dropdown label={"target Language"} lang={Data} setfun={setTargetlang}/>
-        <br />
-        <Inputfield  label={"text area"}  value={textinput} setTextInput={setTextInput}/>
-       <br />
-       <button onClick={apiFetching}>Translate</button>
-       <p> {result}</p>
-    </div>
+    <section className='max-w-screen-xl mx-auto'>
+        <div className='flex justify-center align-middle'>
+            <div className=' shadow-slate-600 text-center '>
+                <h1 className='text-3xl font-bold '>Language Translator</h1>
+                <Dropdown label={"source Language"} lang={Data} setfun={setSourcelang}/>
+                <br />
+                <Dropdown label={"target Language"} lang={Data} setfun={setTargetlang}/>
+                <br />
+                <Inputfield  label={"text area"}  value={textinput} setTextInput={setTextInput}/>
+                <br />
+                <button onClick={apiFetching}>Translate</button>
+                <p> {result}</p>
+            </div>
+        </div>
+    </section>
   )
 }
 
